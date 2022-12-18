@@ -15,3 +15,9 @@ p {
   font-family: "VCR OSD Mono";
   font-size: 8px;
 }
+
+main-font {
+  color: #FFFFFF;
+  font-family: Ubuntu;
+  font-size: 8px;
+}
