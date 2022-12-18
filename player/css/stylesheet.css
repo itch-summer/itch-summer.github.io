@@ -9,3 +9,9 @@ body {
   color: #FFFFFF;
   margin: 0;
 }
+
+p {
+  color: #F0F0F0;
+  font-family: "VCR OSD Mono";
+  font-size: 8px;
+}
