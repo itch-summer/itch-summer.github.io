@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Galano Grotesque';
+    src: url('GalanoGrotesque.eot');
+    src: url('GalanoGrotesque.eot?#iefix') format('embedded-opentype'),
+        url('GalanoGrotesque.woff') format('woff'),
+        url('GalanoGrotesque.ttf') format('truetype'),
+        url('GalanoGrotesque.svg#GalanoGrotesque') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
