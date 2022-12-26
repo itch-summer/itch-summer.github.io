@@ -21,3 +21,11 @@ main-font {
   font-family: Ubuntu;
   font-size: 16px;
 }
+
+song-banner {
+  border-radius: 15px;
+  background: #181818;
+  padding: 20px; 
+  width: 175px;
+  height: 225px; 
+} 
