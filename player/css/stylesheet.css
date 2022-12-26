@@ -22,7 +22,7 @@ main-font {
   font-size: 16px;
 }
 
-song-banner {
+#song-banner {
   border-radius: 15px;
   background: #181818;
   padding: 20px; 
