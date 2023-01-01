@@ -1,5 +1,16 @@
 @charset "UTF-8";
 
 .video-player-plyr {
-    --plyr-color-main: var(--light-blue, #6495ed)
+    --plyr-color-main: var(--light-blue, #6495ed);
+    --plyr-video-background: var(--dark-blue, #42629e);
+    --plyr-tab-focus-color: rgba(255, 255, 255, 128);
+    --plyr-badge-background: var(--menu-color, #4a5464);
+    --plyr-badge-text-color: var(--menu-text-color, #ffffff);
+    --plyr-badge-border-radius: 2px;
+    --plyr-control-icon-size: 20px;
+    --plyr-control-spacing: 10px;
+    --plyr-control-padding: --plyr-control-spacing * 0.7;
+    --plyr-control-radius: 3px;
+    --plyr-control-toggle-checked-background: var(mid-blue, #537cc6);
+    
 }
