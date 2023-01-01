@@ -1,5 +1,5 @@
 @charset "UTF-8";
 
-video-player-plyr {
+.video-player-plyr {
     --plyr-color-main: var(--light-blue, #6495ed)
 }
