@@ -31,5 +31,5 @@ main-font {
 } 
 
 form {
-  align-items: center;
+  box-align: center;
 }
