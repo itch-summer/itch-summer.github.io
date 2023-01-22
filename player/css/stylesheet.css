@@ -29,3 +29,7 @@ main-font {
   width: 175px;
   height: 275px; 
 } 
+
+form {
+  align-items: center;
+}
