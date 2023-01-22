@@ -30,6 +30,10 @@ main-font {
   height: 275px; 
 } 
 
+#select-episode {
+  display: flex;
+}
+
 form {
   box-align: center;
 }
