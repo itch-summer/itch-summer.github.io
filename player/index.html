@@ -18,6 +18,48 @@
         <a href=https://richardkanshen.github.io/itch.summer/player/submit><img src="/itch.summer/images/submit.png" alt="Submit a game for next season" width="20" height="20"></a>
       </div>
     </div>
+    <div id="select-episode">
+      <form>
+        <label for="season-select">season</label>
+        <select id="season-select" name="season">
+          <option value="season-one">season one</option>
+          <option value="season-two">season two</option>
+          <!-- Add more options as necessary -->
+        </select>
+
+        <label for="episode-select">episode</label>
+        <select id="episode-select" name="episode">
+          <option value="trailer">trailer</option>
+          <option value="episode-one">episode one</option>
+          <option value="episode-two">episode two</option>
+          <option value="episode-three">episode three</option>
+          <option value="episode-four">episode four</option>
+          <option value="episode-five">episode five</option>
+          <option value="episode-six">episode six</option>
+          <option value="episode-seven">episode seven</option>
+          <option value="episode-eight">episode eight</option>
+          <option value="episode-nine">episode nine</option>
+          <option value="episode-ten">episode ten</option>
+        </select>
+
+       <input type="button" value="go" onclick="redirect()">
+      </form>
+
+      <script>
+        function redirect() {
+         // Get the selected values
+         var season = document.querySelector("#season-select").value;
+          var episode = document.querySelector("#episode-select").value;
+  
+         // Construct the URL using the template and the selected values
+         var url = `https://richardkanshen.github.io/itch.summer/${season}/${episode}`;
+  
+         // Redirect to the constructed URL
+         window.location.href = url;
+        }
+      </script>
+
+    </div>
     <div id="sidebar" style="position:fixed; top:70.63px; left:0px; width:248px; height:100%; background-color:rgb(20, 20, 20); z-index:1;">
       <div id="sidebar-items" style="position: fixed; top: 80.63px; left: 10px; width: 228px; height: fit-content;">
         <a href="https://richardkanshen.github.io/itch.summer/player"><div id="homepage" style="position: fixed; top:80px; left: 15px; margin: 1em; width:200px; height: 20px;">
