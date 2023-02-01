@@ -41,33 +41,31 @@
            <option value="episode-ten">episode ten</option>
          </select>
 
-         <input type="button" value="go" onclick="redirect()">
+         <input type="button" value="go" onclick="checkOptions()">
         </form>
-
+        
         <script>
-          const form = document.querySelector('form');
-          const submitButton = document.querySelector('#submit-button');
-
-          form.addEventListener('change', () => {
-            const seasonSelect = document.querySelector('#season-select');
-            const episodeSelect = document.querySelector('#episode-select');
-
-            if (seasonSelect.value === '' || episodeSelect.value === '') {
-              submitButton.disabled = true;
+          function checkOptions() {
+            var season = document.getElementById("season-select").value;
+            var episode = document.getElementById("episode-select").value;
+            if (!season && !episode) {
+              window.location.href = "https://richardkanshen.github.io/itch.summer/player/newest-episode.html";
+            } else if (!season || !episode) {
+              alert("Oops...\nit seems that you forgot an option in the search bar! Make sure to fill in both, or leave both empty to go to the latest episode.");
             } else {
-              submitButton.disabled = false;
+              redirect();
             }
-          });
+          }
         </script>
 
        <script>
          function redirect() {
           // Get the selected values
-           var season = document.querySelector("#season-select").value;
-            var episode = document.querySelector("#episode-select").value;
+          var season = document.querySelector("#season-select").value;
+          var episode = document.querySelector("#episode-select").value;
   
            // Construct the URL using the template and the selected values
-           var url = `https://richardkanshen.github.io/itch.summer/watch/${season}/${episode}`;
+          var url = `https://richardkanshen.github.io/itch.summer/watch/${season}/${episode}`;
   
            // Redirect to the constructed URL
            window.location.href = url;
