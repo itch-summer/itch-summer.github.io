@@ -44,6 +44,22 @@
          <input type="button" value="go" onclick="redirect()">
         </form>
 
+        <script>
+          const form = document.querySelector('form');
+          const submitButton = document.querySelector('#submit-button');
+
+          form.addEventListener('change', () => {
+            const seasonSelect = document.querySelector('#season-select');
+            const episodeSelect = document.querySelector('#episode-select');
+
+            if (seasonSelect.value === '' || episodeSelect.value === '') {
+              submitButton.disabled = true;
+            } else {
+              submitButton.disabled = false;
+            }
+          });
+        </script>
+
        <script>
          function redirect() {
           // Get the selected values
