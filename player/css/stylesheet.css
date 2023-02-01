@@ -2,7 +2,7 @@ header {
   background-color: #100c0c;
   color: #FFFFFF;
   margin: 0;
-}  
+}
 
 body {
   background-color: #100c0c;
@@ -25,15 +25,44 @@ main-font {
 #song-banner {
   border-radius: 15px;
   background: #181818;
-  padding: 20px; 
+  padding: 20px;
   width: 175px;
-  height: 275px; 
-} 
+  height: 275px;
+}
 
 #select-episode {
   display: flex;
 }
 
 form {
-  box-align: center;
+  background-color: #121212;
+  border: 1px solid #303030;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+select {
+  width: 250px;
+  height: 30px;
+  border-radius: 30px;
+  border: none;
+  background-color: #121212;
+  color: #ffffff;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+input[type="button"] {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #121212;
+  color: #ffffff;
+  border: none;
+  font-size: 14px;
 }
