@@ -1,38 +1,107 @@
 <html>
-  <head>
-    <title>itch.summer web.player</title>
-    <link rel="stylesheet" href="/itch.summer/player/css/stylesheet.css">
-    <link rel="stylesheet" href="/itch.summer/player/fonts/stylesheet.css">
-    <link rel="stylesheet" href="/itch.summer/fonts/stylesheet.css">
-    <link rel="icon" type="image/x-icon" href="/itch.summer/player/images/Favicon.png">
-    <div id="header" style="position:fixed; height:70.63px; width: 100%; background-color:rgb(20, 20, 20);">
-      <div id="back-to-main-page" style="position:fixed; left:30px; top:25px;">
-        <a href=https://richardkanshen.github.io/itch.summer><img src="/itch.summer/images/back.png" alt="Return to main itch.summer page" width="20" height="20"></a>
-      </div>
-      <div id="logo" style="position:fixed; left:80px; top:10px;">
-        <a href=https://richardkanshen.github.io/itch.summer/player><img src="/itch.summer/player/images/Icon.png" alt="itch.summer web.player icon" width="90" height="50.63"></a>
-      </div>
-      <div id="submit-button" style="position:fixed; right:30px; top:25px;">
-        <a href=https://richardkanshen.github.io/itch.summer/player/submit><img src="/itch.summer/images/submit-active.png" alt="Submit a game for next season" width="20" height="20"></a>
-      </div>
+
+<head>
+  <title>itch.summer web.player</title>
+  <link rel="stylesheet" href="/itch.summer/player/css/stylesheet.css">
+  <link rel="stylesheet" href="/itch.summer/player/fonts/stylesheet.css">
+  <link rel="stylesheet" href="/itch.summer/fonts/stylesheet.css">
+  <link rel="icon" type="image/x-icon" href="/itch.summer/player/images/Favicon.png">
+  <div id="header" style="position:fixed; height:70.63px; width: 100%; background-color:rgb(20, 20, 20);">
+    <div id="back-to-main-page" style="position:fixed; left:30px; top:25px;">
+      <a href=https://richardkanshen.github.io/itch.summer><img src="/itch.summer/images/back.png"
+          alt="Return to main itch.summer page" width="20" height="20"></a>
     </div>
-    <div id="sidebar" style="position:fixed; top:70.63px; left:0px; width:248px; height:100%; background-color:rgb(20, 20, 20);">
-      <div id="sidebar-items" style="position: fixed; top: 80.63px; left: 10px; width: 228px; height: fit-content;">
-        <a href="https://richardkanshen.github.io/itch.summer/player"><div id="homepage" style="position: fixed; top:80px; left: 15px; margin: 1em; width:200px; height: 20px;">
+    <div id="logo" style="position:fixed; left:80px; top:10px;">
+      <a href=https://richardkanshen.github.io/itch.summer/player><img src="/itch.summer/player/images/Icon.png"
+          alt="itch.summer web.player icon" width="90" height="50.63"></a>
+    </div>
+    <div id="submit-button" style="position:fixed; right:30px; top:25px;">
+      <a href=https://richardkanshen.github.io/itch.summer/player/submit><img
+          src="/itch.summer/images/submit-active.png" alt="Submit a game for next season" width="20" height="20"></a>
+    </div>
+    <div id="select-episode">
+      <form>
+        <select id="season-select" name="season">
+          <option disable selected hidden value="">season</option>
+          <option value="season/one">season one</option>
+          <option value="season/two">season two</option>
+          <!-- Add more options as necessary -->
+        </select>
+
+        <select id="episode-select" name="episode" placeholder="episode">
+          <option disable selected hidden value="">episode</option>
+          <option value="trailer">trailer</option>
+          <option value="episode-one">episode one</option>
+          <option value="episode-two">episode two</option>
+          <option value="episode-three">episode three</option>
+          <option value="episode-four">episode four</option>
+          <option value="episode-five">episode five</option>
+          <option value="episode-six">episode six</option>
+          <option value="episode-seven">episode seven</option>
+          <option value="episode-eight">episode eight</option>
+          <option value="episode-nine">episode nine</option>
+          <option value="episode-ten">episode ten</option>
+        </select>
+
+        <input type="button" value="go" onclick="checkOptions()">
+      </form>
+
+      <script>
+        function checkOptions() {
+          var season = document.getElementById("season-select").value;
+          var episode = document.getElementById("episode-select").value;
+          if (!season && !episode) {
+            window.location.href = "https://richardkanshen.github.io/itch.summer/player/newest-episode.html";
+          } else if (!season || !episode) {
+            alert("Oops...\nit seems that you forgot an option in the search bar! Make sure to fill in both, or leave both empty to go to the latest episode.");
+          } else {
+            redirect();
+          }
+        }
+      </script>
+
+      <script>
+        function redirect() {
+          // Get the selected values
+          var season = document.querySelector("#season-select").value;
+          var episode = document.querySelector("#episode-select").value;
+
+          // Construct the URL using the template and the selected values
+          var url = `https://richardkanshen.github.io/itch.summer/watch/${season}/${episode}`;
+
+          // Redirect to the constructed URL
+          window.location.href = url;
+        }
+      </script>
+
+    </div>
+  </div>
+  <div id="sidebar"
+    style="position:fixed; top:70.63px; left:0px; width:248px; height:100%; background-color:rgb(20, 20, 20);">
+    <div id="sidebar-items" style="position: fixed; top: 80.63px; left: 10px; width: 228px; height: fit-content;">
+      <a href="https://richardkanshen.github.io/itch.summer/player">
+        <div id="homepage" style="position: fixed; top:80px; left: 15px; margin: 1em; width:200px; height: 20px;">
           <img src="/itch.summer/images/home.png" alt="Go To The Homepage" width="20" height="20">
-          <main-font style="position:fixed; margin-bottom: 16px; margin-left: 24px; margin-right: 15px;">HOMEPAGE</main-font></a>
-        </div>
-        <a href="https://richardkanshen.github.io/itch.summer/player/music"><div id="music" style="position:fixed; top:120.63px; left:15px; margin: 1em; width:200px; height:20px">
-          <img src="/itch.summer/images/note.png" alt="Music Section" width="20" height="20">
-          <main-font style="position: fixed; margin-bottom: 16px; margin-left: 24px; margin-right: 15px;">MUSIC</main-font></a>
-        </div>
-      </div>
-      <div id="credits" style="position:fixed; bottom:10px; left:10px; width:91.9354839%; height:41px;">
-        <p style="position:fixed; font-size: 14px; text-align: center; bottom:10px; margin: 1em 1.75em;">© 2022 Richard Kanshen</p>
-      </div>
+          <main-font
+            style="position:fixed; margin-bottom: 16px; margin-left: 24px; margin-right: 15px;">HOMEPAGE</main-font>
+      </a>
     </div>
-  </head>
-  <body>
-    <div id="main-page-body" style="position:fixed; top:70.63px; left:248px; height:100%; width:100%;">
-    </div>
-  </body>    
+    <a href="https://richardkanshen.github.io/itch.summer/player/music">
+      <div id="music" style="position:fixed; top:120.63px; left:15px; margin: 1em; width:200px; height:20px">
+        <img src="/itch.summer/images/note.png" alt="Music Section" width="20" height="20">
+        <main-font
+          style="position: fixed; margin-bottom: 16px; margin-left: 24px; margin-right: 15px;">MUSIC</main-font>
+    </a>
+  </div>
+  </div>
+  <div id="credits" style="position:fixed; bottom:10px; left:10px; width:91.9354839%; height:41px;">
+    <p style="position:fixed; font-size: 14px; text-align: center; bottom:10px; margin: 1em 1.75em;">© 2022 Richard
+      Kanshen</p>
+  </div>
+  </div>
+</head>
+
+<body>
+  <div id="main-page-body" style="position:fixed; top:70.63px; left:248px; height:100%; width:100%;">
+  </div>
+</body>
