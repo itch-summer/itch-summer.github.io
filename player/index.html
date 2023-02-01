@@ -20,14 +20,14 @@
        <div id="select-episode">
         <form>
           <select id="season-select" name="season">
-            <option disable selected hidden>season</option>
+            <option disable selected hidden value="">season</option>
             <option value="season-one">season one</option>
             <option value="season-two">season two</option>
             <!-- Add more options as necessary -->
           </select>
 
           <select id="episode-select" name="episode" placeholder="episode">
-           <option disable selected hidden>episode</option>
+           <option disable selected hidden value="">episode</option>
            <option value="trailer">trailer</option>
            <option value="episode-one">episode one</option>
            <option value="episode-two">episode two</option>
@@ -43,6 +43,22 @@
 
          <input type="button" value="go" onclick="redirect()">
         </form>
+
+        <script>
+          const form = document.querySelector('form');
+          const submitButton = document.querySelector('#submit-button');
+
+          form.addEventListener('change', () => {
+            const seasonSelect = document.querySelector('#season-select');
+            const episodeSelect = document.querySelector('#episode-select');
+
+            if (seasonSelect.value === '' || episodeSelect.value === '') {
+              submitButton.disabled = true;
+            } else {
+              submitButton.disabled = false;
+            }
+          });
+        </script>
 
        <script>
          function redirect() {
