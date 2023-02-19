@@ -2,24 +2,24 @@
 
 <head>
   <title>itch.summer web.player</title>
-  <link rel="stylesheet" href="/itch.summer/player/css/stylesheet.css">
-  <link rel="stylesheet" href="/itch.summer/player/fonts/stylesheet.css">
-  <link rel="stylesheet" href="/itch.summer/player/music/fonts/stylesheet.css">
-  <link rel="stylesheet" href="/itch.summer/fonts/stylesheet.css">
+  <link rel="stylesheet" href="/player/css/stylesheet.css">
+  <link rel="stylesheet" href="/player/fonts/stylesheet.css">
+  <link rel="stylesheet" href="/player/music/fonts/stylesheet.css">
+  <link rel="stylesheet" href="/fonts/stylesheet.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1237087024254035"
     crossorigin="anonymous"></script>
-  <link rel="icon" type="image/x-icon" href="/itch.summer/player/images/Favicon.png">
+  <link rel="icon" type="image/x-icon" href="/player/images/Favicon.png">
   <div id="header" style="position:fixed; height:70.63px; width: 100%; background-color:rgb(20, 20, 20); z-index:1;">
     <div id="back-to-main-page" style="position:fixed; left:30px; top:25px;">
-      <a href=https://richardkanshen.github.io/itch.summer><img src="/itch.summer/images/back.png"
+      <a href=https://richardkanshen.github.io><img src="/images/back.png"
           alt="Return to main itch.summer page" width="20" height="20"></a>
     </div>
     <div id="logo" style="position:fixed; left:80px; top:10px;">
-      <a href=https://richardkanshen.github.io/itch.summer/player><img src="/itch.summer/player/images/Icon.png"
+      <a href=https://richardkanshen.github.io/player><img src="/player/images/Icon.png"
           alt="itch.summer web.player icon" width="90" height="50.63"></a>
     </div>
     <div id="submit-button" style="position:fixed; right:30px; top:25px;">
-      <a href=https://richardkanshen.github.io/itch.summer/player/submit><img src="/itch.summer/images/submit.png"
+      <a href=https://richardkanshen.github.io/player/submit><img src="/images/submit.png"
           alt="Submit a game for next season" width="20" height="20"></a>
     </div>
     <div id="select-episode">
@@ -54,7 +54,7 @@
           var season = document.getElementById("season-select").value;
           var episode = document.getElementById("episode-select").value;
           if (!season && !episode) {
-            window.location.href = "https://richardkanshen.github.io/itch.summer/player/newest-episode.html";
+            window.location.href = "https://richardkanshen.github.io/player/newest-episode.html";
           } else if (!season || !episode) {
             alert("Oops...\nit seems that you forgot an option in the search bar! Make sure to fill in both, or leave both empty to go to the latest episode.");
           } else {
@@ -70,7 +70,7 @@
           var episode = document.querySelector("#episode-select").value;
 
           // Construct the URL using the template and the selected values
-          var url = `https://richardkanshen.github.io/itch.summer/watch/${season}/${episode}`;
+          var url = `https://richardkanshen.github.io/watch/${season}/${episode}`;
 
           // Redirect to the constructed URL
           window.location.href = url;
@@ -82,16 +82,16 @@
   <div id="sidebar"
     style="position:fixed; top:70.63px; left:0px; width:248px; height:100%; background-color:rgb(20, 20, 20); z-index:1;">
     <div id="sidebar-items" style="position: fixed; top: 80.63px; left: 10px; width: 228px; height: fit-content;">
-      <a href="https://richardkanshen.github.io/itch.summer/player">
+      <a href="https://richardkanshen.github.io/player">
         <div id="homepage" style="position: fixed; top:80px; left: 15px; margin: 1em; width:200px; height: 20px;">
-          <img src="/itch.summer/images/home.png" alt="Go To The Homepage" width="20" height="20">
+          <img src="/images/home.png" alt="Go To The Homepage" width="20" height="20">
           <main-font
             style="position:fixed; margin-bottom: 16px; margin-left: 24px; margin-right: 15px;">HOMEPAGE</main-font>
       </a>
     </div>
-    <a href="https://richardkanshen.github.io/itch.summer/player/music">
+    <a href="https://richardkanshen.github.io/player/music">
       <div id="music" style="position:fixed; top:120.63px; left:15px; margin: 1em; width:200px; height:20px">
-        <img src="/itch.summer/images/note-active.png" alt="Music Section" width="20" height="20">
+        <img src="/images/note-active.png" alt="Music Section" width="20" height="20">
         <main-font
           style="position: fixed; margin-bottom: 16px; margin-left: 24px; margin-right: 15px;">MUSIC</main-font>
     </a>
